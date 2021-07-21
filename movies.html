@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 Entertainment</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon" sizes="16x20">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><div id="logo">365</div></a>
+        <a class="link-text" href="movies.html">Movies</a>
+        <a class="link-text" href="#tv_series">TV Series</a>
+        <a aria-disabled="true" class="link-text" href="#audio">Audio</a>
+    </nav>
+
+    <main>
+        <div class="carasole slideshow-container">
+            <div class="slides">
+              <img src="images/laagan.jpg" alt="">
+            </div>
+
+            <div class="slides">
+              <img src="images/jujutsu_kaisen.jpg" alt="">
+            </div>
+
+            <div class="slides">
+              <img src="images/avatar.jpg" alt="">
+            </div>
+
+            <div class="slides">
+              <img src="images/hunter-x-hunter.jpg" alt="">
+            </div>
+
+            <div class="slides">
+              <img src="images/swades.jpg" alt="">
+            </div>
+
+            <a class="prev" onclick="carousel(-1, 0)">&#10094;</a>
+            <a class="next" onclick="carousel(1, 0)">&#10095;</a>
+        </div>
+
+        <div class="handlers">
+            <div class="dropdown">
+                <button id="dropbtn" onclick="genreChange()"><span id="genreText">Genre</span> ⏬</button>
+                <div id="dropdown-content">
+                  <a onclick="getMediaPosters(this.text)">All</a>
+                  <a onclick="getMediaPosters(this.text)">Action</a>
+                  <a onclick="getMediaPosters(this.text)">Drama</a>
+                  <a onclick="getMediaPosters(this.text)">Sci-Fi</a>
+                </div>
+            </div>
+    
+            <div class="search-container">
+                <form onsubmit="javascript:return false;">
+                    <input autocomplete="off" type="text" class="input-medium search-query" placeholder="Search your favourite movie title" name="search" oninput="updateResults()">
+                
+                    <div class="search-container-button">
+                        <button type="submit" onclick="updateResults()">🔎</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="movies-list">
+            
+            <div class="movies-action">
+                <div class="movie">
+                    <img src="images/rage_of_bahamut.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">Rage Of Bahamut</b><br/>Action</div>
+                </div>
+                <div class="movie">
+                    <img src="images/babylon.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">Babylom</b><br/>Action</div>
+                </div>
+                <div class="movie">
+                    <img src="images/banana_fish.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">Banana Fish</b><br/>Action</div>
+                </div>
+                <div class="movie">
+                    <img src="images/beatless.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">Beatless</b><br/>Action</div>
+                </div>
+                <div class="movie">
+                    <img src="images/dororo.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">Dororo</b><br/>Action</div>
+                </div>
+                <div class="movie">
+                    <img src="images/vinland_saga.jpg" alt="" />
+                    <div class="overlay"><b class="movie-title">Vinland Saga</b><br/>Action</div>
+                </div>          
+            </div>
+        
+            <div class="movies-drama">
+                <div class="movie">
+                    <img src="images/after_rain.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">After Rain</b><br/>Drama</div>
+                </div>
+                <div class="movie">
+                    <img src="images/fanna.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">Fanna</b><br/>Drama</div>
+                </div>
+                <div class="movie">
+                    <img src="images/veer-zara.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">Veer Zaray</b><br/>Drama</div>
+                </div>
+                <div class="movie">
+                    <img src="images/kesari.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">Kesari</b><br/>Drama</div>
+                </div>
+                <div class="movie">
+                    <img src="images/kho_kho.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">Kho Kho</b><br/>Drama</div>
+                </div>
+                <div class="movie">
+                    <img src="images/wotakoi_love_is_hard_for_otaku.jpg" alt="" />
+                    <div class="overlay"><b class="movie-title">Wotaki</b><br/>Drama</div>
+                </div>
+                <div class="movie">
+                    <img src="images/juliet.jpg" alt="" />
+                    <div class="overlay"><b class="movie-title">Juliet</b><br/>Drama</div>
+                </div>
+                <div class="movie">
+                    <img src="images/sara's.jpg" alt="" />
+                    <div class="overlay"><b class="movie-title">Sara's</b><br/>Drama</div>
+                </div>
+                <div class="movie">
+                    <img src="images/welcome_to_the_ballroom.jpg" alt="" />
+                    <div class="overlay"><b class="movie-title">Welcome to the Ballroom</b><br/>Drama</div>
+                </div>
+            </div>
+        
+            <div class="movies-scifi">
+                <div class="movie">
+                    <img src="images/tenet.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">Tenet</b><br/>Sci-Fi</div>
+                </div>
+                <div class="movie">
+                    <img src="images/the_last_hour.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">The Last Hour</b><br/>Sci-Fi</div>
+                </div>
+                <div class="movie">
+                    <img src="images/interstellar.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">Interstellar</b><br/>Sci-Fi</div>
+                </div>
+                <div class="movie">
+                    <img src="images/the_flash.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">The Flash</b><br/>Sci-Fi</div>
+                </div>
+                <div class="movie">
+                    <img src="images/the great passage.jpg" alt=""  />
+                    <div class="overlay"><b class="movie-title">The Great Passage</b><br/>Sci-Fi</div>
+                </div>
+                <div class="movie">
+                    <img src="images/the_tomorrow_war.jpg" alt="" />
+                    <div class="overlay"><b class="movie-title">The Tomorrow War</b><br/>Sci-Fi</div>
+                </div>    
+            </div>
+        
+            <div id="no-results">No Results Found.</div>
+        </div>
+
+    </main>
+
+    <footer>
+        <a class="links" href="index.html"><div id="logo">365</div></a>
+        <div class="text">Powered by 365 Entertainment Portal 2019. All Rights Reserved.</div>
+    </footer>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

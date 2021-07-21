@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+body{
+    /* background-color: #161616; */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #141b21;
+    color: #f1f1f1;
+}
+
+nav{
+  display: grid;
+  grid-template-columns: 80% auto auto auto;
+  column-gap: 20px;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+main{
+    margin: 25px;
+}
+
+img {
+    height: inherit;
+    width: -webkit-fill-available;
+    border-radius: inherit;
+    object-fit: contain;
+}
+
+footer{
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #0b0d17;
+  margin-top: 95px;
+}
+
+/* ************************************************************************************************************** */
+
+#logo{
+    background-image: linear-gradient(90deg, #fa4f88, #f885f8);
+    display: inline-block;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    font-size: 35px;
+    padding: 0 10px;
+    font-weight: 600;
+    color: black;
+}
+
+.link-text{
+    color: #f1f1f1;
+}
+
+.carasole {
+    height: 324px;
+    background-color: #0b0d17;
+    border-radius: 25px;
+}
+
+.slides {
+    display: none;
+    height: inherit;
+}
+  
+.slides img {
+    vertical-align: middle;
+    width: 100%;
+    height: inherit;
+}
+  
+.slideshow-container {
+position: relative;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+
+
+.movie-list{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    justify-content: space-evenly;
+}
+
+.movie-list img{
+    /* border-radius: 4px; */
+    height: 200px;
+    width: 240px;
+}
+
+.overlay {
+    position: relative;
+    bottom: 70px;
+    /* border-radius: 0 0 7px 7px; */
+    background: rgba(0, 0, 0, 0.85);
+    color: #f1f1f1;
+    width: 240px;
+    text-align: center;
+    text-align-last: center;
+  }
+
+/* ************************ MOVIES.html************************************ */
+
+.handlers{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* ****************** dropdown ***************************** */
+.dropdown-container {
+    margin: 40px 0px;
+  }
+  
+  .dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown #dropbtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 5px 42px;
+    margin: 0px 5px 5px 0px;
+    width: 160px;
+    height: 38px;
+    background-image: linear-gradient(90deg, #fa4f88, #f885f8);
+    text-align: left;
+    border-radius: 4px;
+  }
+  
+  .navbar a:hover,
+.dropdown:hover #dropbtn{
+    background-image: linear-gradient(90deg, #fa4f88b7, #f885f8b7);
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background-image: linear-gradient(90deg, #f885f8, #fa4f88);
+}
+
+#dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+#dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.fa {
+  float: right;
+}
+  
+.show {
+  display: block !important;
+}
+  
+.hide {
+  display: none !important;
+}
+
+/* ******************************** search-bar **************************** */
+
+.search-container{
+    display: inline-block;
+    background-image: linear-gradient(90deg, #fa4f88, #f885f8);
+    font-size: 0;
+    border-radius: 4px;
+}
+
+.search-container form{
+    display: inline-flex;
+    height: 40px;  
+}
+
+.input-medium.search-query{
+    width: 700px;
+    font-size: 16px;
+    outline: none ;
+    border: none;
+    padding: 1px 12px;
+    background-color: transparent;
+    color: #141b21;
+}
+
+.search-container-button button{
+    height: 40px;
+    font-size: 23px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+::placeholder{
+    color: #141b21;
+}
+
+
+/* **************************Movies By Genres*********************************** */
+.movies-list{
+    margin-top: 50px;
+    /* text-align: justify;
+    text-align-last: justify; */
+    text-align: center;
+}
+
+.movies-action, .movies-drama, .movies-scifi{
+    display: inline;
+}
+
+.movie{
+    display: inline-block;
+    margin: 0 2px;
+}
+
+#no-results{
+    display: none;
+}
+
+.movies-list img{
+  width: 280px;
+}
+
+.movies-list .overlay{
+  width: 280px;
+  bottom: 38px;
+}
